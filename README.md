@@ -16,7 +16,7 @@ Game Rules
 List of Features
 
   1. Stations: Stations will represent the functions of the corresponding regions, the latter will be catagorized into different types, for example, residential areas or business areas. The stations will pop up in a random order gradually from the city center to the outskirts. They will be named as a letter plus a number, for example, "R4" stands for a station in the residential area number 4.
-  2. Passengers: The passengers will go to a station that is located in a region of a different function than the current region they are in. The destination of the passengers will be randomly generated with observation to the rule. 
+  2. Passengers: The passengers will go to a station that is located in a region of a different function than the current region they are in. The destinations of the passengers will be randomly generated with observation to the rule. 
   3. Lines: The player need to pay certain amount of money to build a line. He can also input the name for the line which is to be stored in an array.
   4. General: Stations, passengers and lines will be considered as different structs (classes) and stored in separated files. The player can input keywords to add or delete lines, connect new stations to lines, etc. Of course, when no new changes need to be made, the player can simply input "continue" so that the MTR system will continue to function for a certain time period before pausing again to output the current status and wait for the prompt of the player. The map, stations and lines will be drawn using symbols, for example:
 
