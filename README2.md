@@ -15,7 +15,7 @@ Moveable character and the wall of the maze might be decorated with suitable fon
 Features
 
 1.The maze is generated using algorithm aimed at producing random maze. The maze(game sets) of each time the program execute will be different.
-2.
-3
+2.2D arrays will be use to store the characters that make up the wall. 
+3.undo or Redo function were implemented, a struct will be will dynamically created for each user action (undo and redo is not included).
 4.
 5.
