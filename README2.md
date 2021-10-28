@@ -1,13 +1,7 @@
-  __  __               
- |  \/  |              
- | \  / | __ _ _______ 
- | |\/| |/ _` |_  / _ \
- | |  | | (_| |/ /  __/
- |_|  |_|\__,_/___\___|
-                       
-            
-                                                                         
-                                              
+                      
+<img width="841" alt="Screenshot 2021-10-29 at 12 40 17 AM" src="https://user-images.githubusercontent.com/91592141/139299139-7c328d0b-f069-4494-88de-fb13915b8de6.png">
+
+ 
 Team Members
 
 Wong Chor Sing UID: 3035790769 Jiang Nan UID:3033093349
