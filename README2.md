@@ -23,7 +23,7 @@
 
 # Team Members
 
-WONG, Chor Sing UID: 3035790769 
+WONG, Chor Sing UID: 3035790769; 
 JIANG Nan UID:3033093349
 
 # Game Description and Rules
