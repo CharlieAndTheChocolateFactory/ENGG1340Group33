@@ -17,5 +17,5 @@ Features
 1.The maze is generated using algorithm aimed at producing random maze. The maze(game sets) of each time the program execute will be different.
 2.2D arrays will be use to store the characters that make up the wall. 
 3.The system will record the players movement. Once the player exit the game, The player could recover the position he moved when he reenter the game. We will deploy a vector to store the users path. Since vectors, unlike array, could change their size of during runtime. storing the steps that the player moved is henece feasible. 
-4.
-5.
+4.The Saving and loading of the game status will involve file I/O.
+5.The program will break up into several files, including a file with struct
