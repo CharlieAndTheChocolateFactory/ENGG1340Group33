@@ -42,6 +42,9 @@ JIANG Nan UID:3033093349
 5. The program will be divided into several files, with headers, game.cpp and main.cpp;
 6. Moveable character and the wall of the maze might be decorated with suitable color using ANSI escape sequence. 
 
+## Non-standard libraries
+`terminos.h` and `unistd.h` are used for the `readkey()` function in `main.cpp`. This function is used for reading keyboard input without requiring pressing <kbd>Enter</kbd> or <kbd>Return</kbd> 
+
 ## Compilation and Execution Instructions
 
 1. Make sure all files (main.cpp, main.h, game.cpp, game.h, and Makefile) are in the same folder on Linux;
