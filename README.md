@@ -25,9 +25,10 @@
 
 ## Team Members
 
-WONG, Chor Sing UID:3035790769
-
-JIANG Nan UID:3033093349
+|Name|UID|
+|----|---|
+|WONG, Chor Sing|3035790769|
+|JIANG, Nan|3033093349|
 
 ## Game Description and Rules
 
@@ -43,12 +44,12 @@ JIANG Nan UID:3033093349
 6. Moveable character and the wall of the maze might be decorated with suitable color using ANSI escape sequence. 
 
 ## Non-standard libraries
-`terminos.h` and `unistd.h` are used for the `readkey()` function in `main.cpp`. This function is used for reading keyboard input without requiring to press <kbd>Enter</kbd> or <kbd>Return</kbd> 
+`terminos.h` and `unistd.h` are used for the `readkey()` function in [`main.cpp`](main.cpp). This function is used for reading keyboard input without requiring to press <kbd>Enter</kbd> or <kbd>Return</kbd> to improve user experience. 
 
 ## Compilation and Execution Instructions
 
-1. Make sure all files (main.cpp, main.h, game.cpp, game.h, and Makefile) are in the same folder on Linux;
-2. open the folder in terminal;
-3. Type `make`
-4. Type `./main` to start the programme.
-5. After each running. type `make clean` to clean the unwanted files.
+1. Make sure all files (main.cpp, main.h, game.cpp, game.h, and Makefile) are in the same folder on Linux
+2. open the folder in terminal
+3. Type `make` to compile the program
+4. Type `./main` to start the program
+5. If you want to clear unwanted files, you may use the command `make clean`
