@@ -9,9 +9,9 @@ void division(Game * game, int x1,int y1,int x2,int y2){
 
 	int c1 = x1 + 2 + 2 * (rand() % ((x2 - x1 - 2) / 2)); // x1 + 2 = c1 , +2*(rand()%((x2-x1-2)/2)) will force the c1 to be an even number.
 	int c2 = y1 + 2 + 2 * (rand() % ((y2 - y1 - 2) / 2));
-	//cout << "x1: " << x1 << "  x2: " << x2 << endl;
-
-		/*
+        //A diagram to illustrate the generation algorithm
+		
+	        /*
 		   +---x1--c1--x2--->x
 		   |
 		   y1   +---+---+
@@ -57,7 +57,7 @@ maze[y1 + 1 + 2*(rand()%((c2-y1)/2))][c1]=0; //wall 1 wall is made on wall 1
 		game->map->at(c2)[c1 + 1 + 2 * (rand() % ((x2 - c1) / 2))] = 0;
 	}
 
-	division(game, x1, y1, c1, c2); // further divded the four rooms by recursion.
+	division(game, x1, y1, c1, c2); // further divdes the four rooms by recursion.
 	division(game, c1, y1, x2, c2);
 	division(game, x1, c2, c1, y2);
 	division(game, c1, c2, x2, y2);
@@ -73,38 +73,22 @@ bool solve(Game * game, int row, int col, int w, int h) { // check if we can rea
 	}
 
 	maze->at(row)[col]=MAP_CHECKING; // -1 means checking
-//  printf("set maze[%d][%d]=-1\n",row,col);
-  //
-  // for(int i=0;i<h;i++){
-  //   for(int j=0;j<w;j++){
-  //     printf("%2d ",maze->at(i)[j]);
-  //   }
-  //   printf("\n");
-  // }
-  //
-  // printf("\n");
-  // printf("\n");
-  // readkey();
-	for(int i=-1;i<=1;i++){
-    // printf("i: %d\n",i);
+	for(int i=-1;i<=1;i++) {
 		for(int j=-1;j<=1;j++){
-      // printf("  j: %d\n",j);
-      // printf("  checking maze[%d][%d]\n",row+i,col+j);
 			if( row+i<0 || col+j<0 || row+i>=h || col+j>=w ||
-          (i==0 && j==0) /* middle block */||
-          (maze->at(row+i)[col+j]==MAP_WALL) /* wall */||
-          (maze->at(row+i)[col+j]==MAP_CHECKING) /* checking */ ||
-          (i*j!=0) /* none of NESW */ ){
-        // printf("    skipped\n");
-        continue;
+                            (i==0 && j==0) /* middle block */||
+                            (maze->at(row+i)[col+j]==MAP_WALL) /* wall */||
+                            (maze->at(row+i)[col+j]==MAP_CHECKING) /* checking */ ||
+                            (i*j!=0) /* none of NESW */ ){
+				continue;
 			}
 
 			if(solve(game,row+i,col+j,w,h)){
 				maze->at(row)[col]=MAP_PATH; // if reachable, the middle is reachable too.
 				return true;
-			}else{ // if reachable, the middle is reachable too.
-				//return false;
-      }
+			} else { // if reachable, the middle is reachable too.
+				 // return false;
+			}
 
 		}
 	}
