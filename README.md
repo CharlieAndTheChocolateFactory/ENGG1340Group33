@@ -46,4 +46,4 @@ JIANG Nan UID:3033093349
 
 1. Make sure all files (main.cpp, main.h, game.cpp, game.h, and Makefile) are in the same folder on Linux;
 2. Type "make main";
-3. ./main.
+3. Type "./main" to start the game.
