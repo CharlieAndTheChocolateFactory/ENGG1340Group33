@@ -43,7 +43,7 @@ JIANG Nan UID:3033093349
 6. Moveable character and the wall of the maze might be decorated with suitable color using ANSI escape sequence. 
 
 ## Non-standard libraries
-`terminos.h` and `unistd.h` are used for the `readkey()` function in `main.cpp`. This function is used for reading keyboard input without requiring pressing <kbd>Enter</kbd> or <kbd>Return</kbd> 
+`terminos.h` and `unistd.h` are used for the `readkey()` function in `main.cpp`. This function is used for reading keyboard input without requiring to press <kbd>Enter</kbd> or <kbd>Return</kbd> 
 
 ## Compilation and Execution Instructions
 
