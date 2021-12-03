@@ -25,7 +25,7 @@
 
 ## Team Members
 
-WONG, Chor Sing UID: 3035790769
+WONG, Chor Sing UID:3035790769
 
 JIANG Nan UID:3033093349
 
@@ -41,3 +41,7 @@ JIANG Nan UID:3033093349
 4. The system will provide the function to save/load the game, including the maze itself and the position history of the player. The player can opt to save the game into a file and quit the system, the file can be reloaded to continue the game.
 5. The program will be divided into several files, with headers, game.cpp and main.cpp.
 6. Moveable character and the wall of the maze might be decorated with suitable color using ANSI escape sequence. 
+
+## Compilation and Execution Instructions
+
+1. Make sure all files (
