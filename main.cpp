@@ -10,8 +10,9 @@
 #include "game.h"
 using namespace std;
 
-char ansi_reset[] = "\033[40m\033[37m";
-char cls[] = "\033[2J\033[0;0H\033[40m\033[37m";
+char ansi_reset[] = "\033[40m\033[37m"; //ANSI escape sequance for (re)seting the text color to white and background color to black
+char cls[] = "\033[2J\033[0;0H\033[40m\033[37m"; //ANSI escape sequance for clearing the screen and set cursor position to top-left-hand corner.
+
 ////////BELOW FUNCTION MODIFIED FROM https://stackoverflow.com/questions/1798511/how-to-avoid-pressing-enter-with-getchar
 int readkey() {
     int c;
@@ -166,18 +167,18 @@ void start_game(){
 void show_maze(Game *game, bool show_bar) {
     cout << cls <<endl;//clear screen
     cout << "   START HERE "<<endl;
-  	cout << "   \u2193"<<endl;
+  	cout << "   \u2193"<<endl; //the downward arrow
     for (int i = 0; i < game->map_height; i++) {
       for (int j = 0; j < game->map_width; j++) {
         if (game->player_pos[ROW] == i && game->player_pos[COL] == j) {
-          cout << "\033[45m  ";
+          cout << "\033[45m  "; 
         } else {
           cout << (game->map->at(i)[j] == MAP_WALL?"\033[47m  ":(game->map->at(i)[j] == MAP_PATH?"\033[46m  ":"\033[40m  "));
         }
       }
       cout << ansi_reset << endl;
     }
-    cout << std::setfill(' ') << std::setw((game->map_width) * 2) << "\u2193" << endl; // add start and exit with arrow.
+    cout << std::setfill(' ') << std::setw((game->map_width) * 2) << "\u2193" << endl; // add exit arrow.
     cout << std::setfill(' ') << std::setw((game->map_width) * 2) << "EXIT" << endl;
     cout << ansi_reset << endl;
     if(show_bar){
