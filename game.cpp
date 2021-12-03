@@ -73,14 +73,29 @@ bool solve(Game * game, int row, int col, int w, int h) { // check if we can rea
 	}
 
 	maze->at(row)[col]=MAP_CHECKING; // -1 means checking
-
+//  printf("set maze[%d][%d]=-1\n",row,col);
+  //
+  // for(int i=0;i<h;i++){
+  //   for(int j=0;j<w;j++){
+  //     printf("%2d ",maze->at(i)[j]);
+  //   }
+  //   printf("\n");
+  // }
+  //
+  // printf("\n");
+  // printf("\n");
+  // readkey();
 	for(int i=-1;i<=1;i++){
+    // printf("i: %d\n",i);
 		for(int j=-1;j<=1;j++){
+      // printf("  j: %d\n",j);
+      // printf("  checking maze[%d][%d]\n",row+i,col+j);
 			if( row+i<0 || col+j<0 || row+i>=h || col+j>=w ||
           (i==0 && j==0) /* middle block */||
           (maze->at(row+i)[col+j]==MAP_WALL) /* wall */||
           (maze->at(row+i)[col+j]==MAP_CHECKING) /* checking */ ||
           (i*j!=0) /* none of NESW */ ){
+        // printf("    skipped\n");
         continue;
 			}
 
